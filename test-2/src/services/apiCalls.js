@@ -10,7 +10,7 @@ export const getUsers = async () => {
 };
 
 export const getUserById = async (id) => {
-  let res = await axios.get(dataBase + id);
+  let res = await axios.get(dataBase + "/" + id);
 
   console.log(res.results);
   return res;

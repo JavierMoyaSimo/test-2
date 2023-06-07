@@ -1,17 +1,16 @@
-
 //Imports
-
+import { useSelector, useDispatch } from "react-redux";
+import {detailData, addDetail} from '../Detail/detailSlice';
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.scss";
-import { getUsers,  } from "../../services/apiCalls";
-
+import { getUsers } from "../../services/apiCalls";
 
 const Home = () => {
-
-
   const navigate = useNavigate();
+  const detailsFromRdx = useSelector(detailData);
 
+  const dispatch = useDispatch();
 
   //Hooks
 
@@ -34,18 +33,30 @@ const Home = () => {
     navigate("/");
   };
 
-
+  const clickedUser = (user) => {
+    dispatch(addDetail({ ...user, details: user }));
+    setTimeout(() => {
+      navigate("/detail");
+    }, 750);
+  };
 
   //RENDER
 
   if (users.length === 0) {
     return <div>AQUI NO VA NADA!</div>;
-  } else if (users.length > 0) {
+  } else if (detailsFromRdx.details.length > 0) {
     return (
-      <div className="">ESTOY AQUI2!
-        {users.map((user, index) => {
+      <div className="">
+        ESTOY AQUI2!
+        {detailsFromRdx.details.map((user, index) => {
           return (
-            <div key={index} >
+            <div
+              key={index}
+              onClick={() => {
+                clickedUser(user);
+              }}
+              className=""
+            >
               <div>{user.id}</div>
               <div>{user.name}</div>
               <div>{user.status}</div>
@@ -59,10 +70,18 @@ const Home = () => {
     );
   } else {
     return (
-      <div className=""> ESTOY AQUI3!
+      <div className="">
+        {" "}
+        ESTOY AQUI3!
         {users.map((user, index) => {
           return (
-            <div key={index} >
+            <div
+              key={index}
+              onClick={() => {
+                clickedUser(user.id);
+              }}
+              className=""
+            >
               <div>{user.id}</div>
               <div>{user.name}</div>
               <div>{user.status}</div>
