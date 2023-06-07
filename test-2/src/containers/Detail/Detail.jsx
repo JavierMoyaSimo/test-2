@@ -4,14 +4,21 @@ import { detailData } from "./detailSlice";
 import "./Detail.scss";
 import { useNavigate } from "react-router-dom";
 
-const Detail = () => {
+const Detail = (props) => {
   const navigate = useNavigate();
+
+  //Data from Redux
   const selectedUser = useSelector(detailData);
+
+  const prop = props;
+  console.log(prop);
 
   //FUNCTIONS
   const returnHome = () => {
     navigate("/");
   };
+
+  //RENDER
 
   if (selectedUser?.id !== undefined) {
     return (
@@ -42,7 +49,10 @@ const Detail = () => {
             />
           </div>
         </div>
-        <div onClick={() => returnHome()} className="">
+        <div
+          onClick={() => returnHome()}
+          className={prop ? "detail-button toDark" : "detail-button toLight"}
+        >
           Home
         </div>
       </div>

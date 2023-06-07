@@ -30,13 +30,11 @@ padding: 3em;
 }
 
 li {
-    color: black;
+ 
     font-weight: bold;
 }
 
-p {
-    color: green;
-}
+
 
 .detail-li {
     display: flex;
@@ -48,6 +46,27 @@ p {
 .img-div {
     padding: 3em;   
 }
+
+//Button to Home
+.detail-button{
+    padding: 1em;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.toLight {
+    border: 1px solid black;   
+}
+
+.toDark {
+    border: 1px solid white;
+}
+
+.detail-button:hover {
+    opacity: 50%;
+}
+
+
 
 
 

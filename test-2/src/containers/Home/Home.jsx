@@ -6,10 +6,12 @@ import { useNavigate } from "react-router-dom";
 import "./Home.scss";
 import { getUsers } from "../../services/apiCalls";
 
-const Home = () => {
+const Home = (props) => {
   const navigate = useNavigate();
-
   const dispatch = useDispatch();
+
+  //Value of props
+  const prop = props;
 
   //HOOKS
 
@@ -27,6 +29,15 @@ const Home = () => {
     }
   }, [users.length]);
 
+  //NO HACE FALTA
+  // const [propValue, setPropValue] = useState(true);
+
+  // useEffect(() => {
+  //   if (props !== propValue) {
+  //     setPropValue(props);
+  //   }
+  // }, [props]);
+
   //FUNCTIONS
 
   const clickedUser = (user) => {
@@ -41,8 +52,20 @@ const Home = () => {
 
   if (users) {
     return (
-      <>
-        <div className="container table">
+      <div
+        className={
+          prop.lightNight
+            ? "dark-mode total-width  "
+            : "light-mode total-width  "
+        }
+      >
+        <div
+          className={
+            prop.lightNight
+              ? "dark-mode container table"
+              : "light-mode container table"
+          }
+        >
           <div className="flex header">
             <div className=" width-max">ID</div>
             <div className="width-max">Name</div>
@@ -73,7 +96,7 @@ const Home = () => {
             </>
           ))}
         </div>
-      </>
+      </div>
     );
   }
 };

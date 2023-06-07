@@ -1,5 +1,28 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Button */
+.button {
+  text-align: center;
+  cursor: pointer;
+}
+
+/*DarkMode*/
+ .dark-mode {
+ 
+  background-color: black;
+  color: white;
+}
+
+.light-mode {
+ 
+  background-color: rgba(149, 174, 216, 0.215);
+  color: black;
+}

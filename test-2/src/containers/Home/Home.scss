@@ -1,7 +1,19 @@
 
+
+body {
+  overflow-x: hidden;
+}
+
+.total-width {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 // Main div
 .container {
-  width: 100%;
   padding: 4em;
   background-color: rgba(149, 174, 216, 0.215);
 }
@@ -36,12 +48,12 @@ hr {
   width: 100%;
 }
 
-
 // Image transition
 .opacity {
-    transition: all 1s;
+  transition: all 1s;
 }
 
 .opacity:hover {
-opacity: 50%;
+  opacity: 50%;
 }
+
