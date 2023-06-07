@@ -1,3 +1,56 @@
+//Main container
+.view-div {
+    background-color: rgba(149, 174, 216, 0.215);
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+//Name header
+.title {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+//Div with character info
+.content-detail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//Div with ID, Status, Specie
+.info-detail{
+background-color:rgba(149, 174, 216, 0.215);
+padding: 3em;
+}
+
+li {
+    color: black;
+    font-weight: bold;
+}
+
+p {
+    color: green;
+}
+
+.detail-li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+//Image div
+.img-div {
+    padding: 3em;   
+}
+
+
+
 
 //Handle-error Detail's view
 .error-view {

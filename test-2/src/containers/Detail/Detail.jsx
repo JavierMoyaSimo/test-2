@@ -13,20 +13,37 @@ const Detail = () => {
     navigate("/");
   };
 
- 
-
   if (selectedUser?.id !== undefined) {
     return (
-      <div className="">
-        <div className="">
-          <div>{selectedUser?.id}</div>
-          <div className="">{selectedUser?.name}</div>
-          <div>{selectedUser?.status}</div>
-          <div>{selectedUser?.species}</div>
-          <img className="" src={selectedUser?.image} />
+      <div className="view-div">
+        <div className="title">{selectedUser?.name}</div>
+        <div className="content-detail">
+          <ul className="info-detail">
+            <div className="detail-li">
+              <li>Id -</li> <p>{selectedUser?.id}</p>
+            </div>
+            <div className="detail-li">
+              <li>Name - </li>
+              <p>{selectedUser?.name}</p>
+            </div>
+            <div className="detail-li">
+              <li>Status -</li> <p>{selectedUser?.status}</p>
+            </div>
+            <div className="detail-li">
+              <li>Specie - </li>
+              <p>{selectedUser?.species}</p>
+            </div>
+          </ul>
+          <div className="img-div">
+            <img
+              className=""
+              src={selectedUser?.image}
+              style={{ maxWidth: 300, height: "auto" }}
+            />
+          </div>
         </div>
         <div onClick={() => returnHome()} className="">
-          Volver a Home
+          Home
         </div>
       </div>
     );
@@ -34,7 +51,9 @@ const Detail = () => {
     return (
       <div className="error-view">
         <div>Sorry, there has been an error</div>
-        <button className="error-button" onClick={() => returnHome()}>Home</button>
+        <button className="error-button" onClick={() => returnHome()}>
+          Home
+        </button>
       </div>
     );
   }
