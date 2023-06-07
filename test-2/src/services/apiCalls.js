@@ -5,13 +5,14 @@ const dataBase = "https://rickandmortyapi.com/api/character";
 
 export const getUsers = async () => {
   let res = await axios.get(dataBase);
-  console.log(res.results);
-  return res.results;
+  console.log(res.data.results);
+  return res.data.results;
+  
 };
 
 export const getUserById = async (id) => {
   let res = await axios.get(dataBase + "/" + id);
 
-  console.log(res.results);
-  return res;
+  console.log(res.data.results);
+  return res.data;
 };

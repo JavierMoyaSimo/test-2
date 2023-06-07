@@ -27,6 +27,10 @@ const Detail = () => {
         </div>
       </div>
     );
+  } else {
+    return (
+      <div>FALLO!</div>
+    )
   }
 };
 
