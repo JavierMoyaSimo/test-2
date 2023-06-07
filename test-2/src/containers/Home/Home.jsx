@@ -26,7 +26,7 @@ const Home = () => {
         })
         .catch((error) => console.error(error));
     }
-  },[] );
+  },[users.length] );
 
   //FUNCTIONS
   const returnHome = () => {
@@ -35,6 +35,7 @@ const Home = () => {
 
   const clickedUser = (user) => {
     dispatch(addDetail({ ...user, details: user }));
+    console.log(user)
     setTimeout(() => {
       navigate("/detail");
     }, 750);
@@ -51,7 +52,7 @@ const Home = () => {
             <div
               key={index}
               onClick={() => {
-                clickedUser(user.id);
+                clickedUser(user);
               }}
               className=""
             >

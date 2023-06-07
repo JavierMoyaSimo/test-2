@@ -1,10 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit/dist";
 
 export const detailSlice = createSlice({
     name: 'detail',
     initialState: {
         details: {},
-        search: []
+     
+       
     },
     reducers: {
         addDetail: (state, action) => {

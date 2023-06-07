@@ -12,7 +12,6 @@ export const getUsers = async () => {
 
 export const getUserById = async (id) => {
   let res = await axios.get(dataBase + "/" + id);
-
-  console.log(res.data.results);
+  console.log(res.data);
   return res.data;
 };

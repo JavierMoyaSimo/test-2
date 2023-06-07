@@ -3,16 +3,32 @@ import { useSelector } from "react-redux";
 import { detailData } from "./detailSlice";
 import "./Detail.scss";
 import { useNavigate } from "react-router-dom";
+// import { getUserById } from "../../services/apiCalls";
+// import { useState, useEffect } from "react";
 
 const Detail = () => {
   const navigate = useNavigate();
   const selectedUser = useSelector(detailData);
+  console.log(selectedUser);
+
+  //Hooks
+
+  //useState
+  // const [detail, setDetail] = useState([]);
+  // const [user, setUser] = useState([]);
+
 
   const returnHome = () => {
     navigate("/");
   };
 
-  if (selectedUser?.id !== undefined) {
+
+  // const characterId = selectedUser?.details?.id;
+
+  if (selectedUser !== undefined) {
+
+ 
+    
     return (
       <div className="">
         <div className="">
@@ -29,8 +45,11 @@ const Detail = () => {
     );
   } else {
     return (
-      <div>FALLO!</div>
-    )
+      <div>
+        <div>FALLO!</div>
+        <button onClick={() => returnHome()}>AQUIBOTON</button>
+      </div>
+    );
   }
 };
 

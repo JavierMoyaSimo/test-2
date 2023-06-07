@@ -4,7 +4,7 @@ import detailSlice from '../containers/Detail/detailSlice';
 
 export default configureStore({
     reducer: {
-        user: detailSlice,
+        detail: detailSlice,
        
 
     }
