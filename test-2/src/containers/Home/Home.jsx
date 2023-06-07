@@ -1,6 +1,6 @@
 //Imports
-import {  useDispatch } from "react-redux";
-import {  addDetail } from "../Detail/detailSlice";
+import { useDispatch } from "react-redux";
+import { addDetail } from "../Detail/detailSlice";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.scss";
@@ -8,11 +8,10 @@ import { getUsers } from "../../services/apiCalls";
 
 const Home = () => {
   const navigate = useNavigate();
-  // const detailsFromRdx = useSelector(detailData);
 
   const dispatch = useDispatch();
 
-  //Hooks
+  //HOOKS
 
   //useState
   const [users, setUsers] = useState([]);
@@ -26,16 +25,13 @@ const Home = () => {
         })
         .catch((error) => console.error(error));
     }
-  },[users.length] );
+  }, [users.length]);
 
   //FUNCTIONS
-  const returnHome = () => {
-    navigate("/");
-  };
 
   const clickedUser = (user) => {
     dispatch(addDetail({ ...user, details: user }));
-    console.log(user)
+
     setTimeout(() => {
       navigate("/detail");
     }, 750);
@@ -45,27 +41,39 @@ const Home = () => {
 
   if (users) {
     return (
-      <div className="">
-        
-        {users.map((user, index) => {
-          return (
-            <div
-              key={index}
-              onClick={() => {
-                clickedUser(user);
-              }}
-              className=""
-            >
-              <div>{user.id}</div>
-              <div>{user.name}</div>
-              <div>{user.status}</div>
-              <div>{user.species}</div>
-              <div>{user.image}</div>
-            </div>
-          );
-        })}
-        <div onClick={() => returnHome()}>Volver a home</div>
-      </div>
+      <>
+        <div className="container table">
+          <div className="flex header">
+            <div className=" width-max">ID</div>
+            <div className="width-max">Name</div>
+            <div className="width-max">Status</div>
+            <div className="width-max">Species</div>
+            <div className="width-max">Face</div>
+          </div>
+
+          {users.map((user) => (
+            <>
+              <div key={user.id} className="flex">
+                <div className="width-max">{user.id}</div>
+                <div className="width-max">{user.name}</div>
+                <div className="width-max">{user.status}</div>
+                <div className="width-max">{user.species}</div>
+                <div className="width-max opacity">
+                  <img
+                    onClick={() => {
+                      clickedUser(user);
+                    }}
+                    src={user.image}
+                    alt={user.name}
+                    style={{ maxWidth: 60, height: "auto", cursor: "pointer" }}
+                  />
+                </div>
+              </div>
+              <hr />
+            </>
+          ))}
+        </div>
+      </>
     );
   }
 };

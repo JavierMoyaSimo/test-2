@@ -1,0 +1,46 @@
+// Main div
+.container {
+  width: 100%;
+  padding: 4em;
+  background-color: rgba(149, 174, 216, 0.215);
+}
+
+//Grid-class
+.table {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2em;
+}
+
+//Flex-class
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//Specify size of each element
+.width-max {
+  width: 25%;
+}
+
+// To separate rows
+hr {
+  width: 100%;
+}
+
+//First row
+.header {
+  background-color: rgba(190, 164, 223, 0.219);
+  width: 100%;
+}
+
+
+// Image transition
+.opacity {
+    transition: all 1s;
+}
+
+.opacity:hover {
+opacity: 50%;
+}

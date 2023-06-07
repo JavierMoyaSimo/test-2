@@ -10,7 +10,7 @@ function App() {
   return(
      <div className="App">
     <BrowserRouter>
-      {/* Aqui va la parte fija */}
+      
 
       <Routes>
         <Route  path="/" element={<Home />} />
