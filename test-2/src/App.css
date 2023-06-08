@@ -10,6 +10,7 @@ body {
 
 /* Button */
 .button {
+  height: 5vh;
   text-align: center;
   cursor: pointer;
 }

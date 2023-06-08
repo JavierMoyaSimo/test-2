@@ -29,14 +29,7 @@ const Home = (props) => {
     }
   }, [users.length]);
 
-  //NO HACE FALTA
-  // const [propValue, setPropValue] = useState(true);
 
-  // useEffect(() => {
-  //   if (props !== propValue) {
-  //     setPropValue(props);
-  //   }
-  // }, [props]);
 
   //FUNCTIONS
 
