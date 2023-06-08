@@ -4,8 +4,8 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
-import Home from "./containers/Home/Home";
-import Detail from "./containers/Detail/Detail";
+import Home from "./containers/Home/Home.jsx";
+import Detail from "./containers/Detail/Detail.jsx";
 
 
 function App() {

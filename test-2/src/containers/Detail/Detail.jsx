@@ -1,6 +1,6 @@
 //Imports
 import { useSelector } from "react-redux";
-import { detailData } from "./detailSlice";
+import { detailData } from "./detailSlice.js";
 import "./Detail.scss";
 import { useNavigate } from "react-router-dom";
 

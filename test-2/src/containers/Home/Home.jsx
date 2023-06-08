@@ -1,10 +1,10 @@
 //Imports
 import { useDispatch } from "react-redux";
-import { addDetail } from "../Detail/detailSlice";
+import { addDetail } from "../Detail/detailSlice.js";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.scss";
-import { getUsers } from "../../services/apiCalls";
+import { getUsers } from "../../services/apiCalls.js";
 
 const Home = (props) => {
   const navigate = useNavigate();
