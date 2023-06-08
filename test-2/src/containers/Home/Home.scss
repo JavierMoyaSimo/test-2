@@ -1,8 +1,7 @@
 @media (max-width: 500px) {
     
   .header {
-    font-size: small;
-     
+    font-size: small;     
   }
 
   .container {
@@ -21,20 +20,18 @@ body {
   overflow-x: hidden;
 }
 
-.total-width {
-  
+
+.total-width {  
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 // Main div
 .container {
   width: 100vw;
   padding: 2em;
-  // padding: 4em;
   background-color: rgba(149, 174, 216, 0.215);
 }
 
