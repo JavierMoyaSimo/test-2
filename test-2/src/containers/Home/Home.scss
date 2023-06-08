@@ -1,3 +1,20 @@
+@media (max-width: 500px) {
+    
+  .header {
+    font-size: small;
+     
+  }
+
+  .container {
+    padding: 2em;
+  }
+
+  .flex {
+    font-size: small;
+    text-align: center;
+  }
+}
+
 
 
 body {
@@ -15,7 +32,9 @@ body {
 
 // Main div
 .container {
-  padding: 4em;
+  width: 100vw;
+  padding: 2em;
+  // padding: 4em;
   background-color: rgba(149, 174, 216, 0.215);
 }
 

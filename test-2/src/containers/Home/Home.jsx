@@ -29,8 +29,6 @@ const Home = (props) => {
     }
   }, [users.length]);
 
-
-
   //FUNCTIONS
 
   const clickedUser = (user) => {
