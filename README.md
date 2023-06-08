@@ -5,6 +5,7 @@
 ## General information
 
 This project consists of creating, with React, a website with the following functions:
+</br>
 1- Create a grid/card with rows showing data.
 2- When the screen starts, make a request to an API, in this case Ricky Morty's API, and render the data in the Grid.
 3- Add dark/light mode
