@@ -22,34 +22,15 @@ This project consists of creating, with React, a website with the following func
 To see the project on your computer, you should do the following steps:
 
 1- Clone the repository : git clone https://github.com/JavierMoyaSimo/test-2.git
+</br>
 2- cd test-2/
+</br>
 3- cd test-2/
+</br>
 4- Install dependencies: npm i
+</br>
 5- View project locally: npm run dev
-
-
-## Views
-
-Main view: 'Home' (Light mode)
-<br>
-<img src="./img/img1.PNG" width="400em"/>
-<br>
-
-Main view: 'Home' (Dark mode)
-<br>
-<img src="./img/img2.PNG" width="400em"/>
-<br>
-
-Detail view: (Light mode)
-<br>
-<img src="./img/img3.PNG" width="400em"/>
-<br>
-
-Detail view: (Dark mode)
-
-<br>
-<img src="./img/img4.PNG" width="400em"/>
-<br>
+</br>
 
 
 ## Technologies, dependencies and libraries
